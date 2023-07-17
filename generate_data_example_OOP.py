@@ -1,4 +1,5 @@
 import numpy as np
+
 import matplotlib.pyplot as plt
 import math as m
 
@@ -99,7 +100,8 @@ class RadarCrossSection:
         fig = plt.figure()
         ax = fig.add_subplot(111, projection='3d')
         ax.scatter(self.r[:, 0], self.r[:, 1], self.r[:, 2], c='green', marker='o')
-        plt.show()
+        plt.savefig('figure1.png')
+        plt.close()
 
     def plot_rcs(self):
         # Plotting polar graph for far zone
@@ -117,7 +119,8 @@ class RadarCrossSection:
 
         ax.set_rticks([])  # Remove radial tick labels
         ax.legend(legendData)
-        plt.show()
+        plt.savefig('figure2.png')
+        plt.close()
 
 
 if __name__=='__main__':
