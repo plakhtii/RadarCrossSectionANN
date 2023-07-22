@@ -9,7 +9,7 @@ output_data = np.array([[0.2, 0.3, 0.1, 0.5], [0.3, 0.1, 0.2, 0.7]])
 # Make sure the input and output data have the same number of samples
 assert input_data.shape[0] == output_data.shape[0], "Number of samples in input and output data should match"
 
-# Define the ANN model
+# Define the ANN modeltra
 model = Sequential()
 model.add(Dense(8, input_dim=input_data.shape[1], activation='relu'))
 model.add(Dense(4, activation='sigmoid'))
